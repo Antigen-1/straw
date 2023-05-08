@@ -14,7 +14,8 @@
 
     ;;major layout
     (define main-pane (new vertical-pane% (parent this)))
-    (define color-panel (new vertical-panel% (parent main-pane) (enabled #f) (style '(border)) (border 3)))
+    (define color-panel (new vertical-panel% (parent main-pane) (enabled #f) (style '(border)) (border 5)))
+    (define bitmap-pane (new vertical-pane% (parent main-pane) (min-width width) (min-height height)))
 
     ;;colors
     (define BLUE (make-object color% "blue"))
@@ -39,7 +40,7 @@
     (define canvas-with-event-handler%
       (class canvas%
         (super-new
-         (parent main-pane)
+         (parent bitmap-pane)
          (enabled #t)
          (paint-callback (lambda (_ d)
                            (send d draw-bitmap bitmap 0 0))))
