@@ -1,3 +1,3 @@
 straw
 =====
-README text here.
+Extract colors from a bitmap.

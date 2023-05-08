@@ -7,4 +7,4 @@
 
 @defmodule[straw]
 
-Package Description Here
+Extract colors from a bitmap.
