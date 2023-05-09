@@ -15,7 +15,7 @@
     ;;major layout
     (define main-pane (new vertical-pane% (parent this) (alignment '(left top))))
     (define color-panel (new vertical-panel% (parent main-pane) (enabled #f) (style '(border)) (border 5)))
-    (define bitmap-pane (new vertical-pane% (parent main-pane) (min-width width) (min-height height)))
+    (define bitmap-pane (new vertical-pane% (parent main-pane) (min-width width) (min-height height) (stretchable-width #f) (stretchable-height #f)))
 
     ;;colors
     (define BLUE (make-object color% "blue"))
